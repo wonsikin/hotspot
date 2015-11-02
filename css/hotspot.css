@@ -1,0 +1,340 @@
+.hs-wrap {
+	position: relative;
+}
+.hs-wrap.hs-loading * {
+	display: none;
+}
+.hs-wrap img {
+	display: block;
+	width: 560px;
+}
+
+/* SPOTS */
+
+.hs-spot-object {
+	position: absolute;
+	cursor: pointer;
+	z-index: 1;
+}
+.hs-spot-object.visible-tooltip {
+	z-index: 9999;
+}
+.hs-spot.visible .hs-spot-shape {
+	position: absolute;
+	left: -1px;
+	top: -1px;
+	background: black;
+	border-radius: 40px;
+	-moz-border-radius: 40px;
+	-webkit-border-radius: 40px;
+	width: 100%;
+	height: 100%;
+	opacity: 0.15;
+	z-index: 0;
+	border: 1px solid white;
+}
+.hs-spot.visible .hs-spot-shape-inner {
+	border-radius: 50%;
+	box-shadow: 0 0 0 6px rgba(10, 10, 10, 0.65);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 10px;
+	height: 10px;
+	margin: -9px 0 0 -9px;
+	z-index: 1;
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+}
+.hs-spot.visible:hover .hs-spot-shape {
+	width: 26px;
+	height: 26px;
+	left: 1px;
+	top: 1px;
+}
+.hs-rect {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../../img/hotspot-map/transp.gif.htmlf);
+	cursor: pointer;
+	z-index: 99;
+	border: none;
+}
+.hs-rect.visible .hs-spot-shape {
+	position: absolute;
+	left: -3px;
+	top: -3px;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background: none;
+	border: 3px solid #da0606;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+.hs-rect.visible .hs-spot-shape-inner {
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	background: none;
+	border: 8px solid black;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	left: -8px;
+	top: -8px;
+	opacity: 0.15;
+}
+.hs-rect.visible:hover .hs-spot-shape {
+	border-width: 5px;
+	left: -5px;
+	top: -5px;
+}
+.hs-rect.visible:hover .hs-spot-shape-inner {
+	border-width: 7px;
+	left: -7px;
+	top: -7px;
+}
+
+/* RED */
+
+
+/* TOOLTIPS */
+
+
+.hs-spot-object .hs-spot-tooltip-outer {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.hs-tooltip-wrap {
+	position: absolute;
+}
+.hs-tooltip {
+	display: block;
+	background: rgba(24, 24, 24, 0.85);
+	color: #fff;
+	font: 11px/18px helvetica, tahoma, sans-serif;
+	padding: 8px;
+	position: relative;
+	min-height: 18px;
+	width: 100px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.hs-wrap.mouseover .hs-spot-object.left .hs-spot-tooltip-outer, .hs-wrap.click .hs-spot-object.left .hs-spot-tooltip-outer {
+	position: absolute;
+	top: 0;
+	left: -30px;
+}
+.hs-spot-object.left .hs-tooltip-wrap {
+	right: 100%;
+	top: 0;
+	padding-right: 16px;
+}
+.hs-spot.left .hs-tooltip-wrap {
+	top: 50px;
+}
+.hs-spot-object.left .hs-tooltip-line:before {
+	position: absolute;
+  content: "";
+  display: block;
+  left: 0px;
+  width: 60px;
+  height: 1px;
+  background: rgba(24, 24, 24, 0.85);
+  transform: rotate(-30deg) translate(77px,12px);
+}
+
+.hs-spot-object.left .hs-tooltip-line:after {
+	position: absolute;
+  content: "";
+  display: block;
+  left: 0px;
+  width: 14px;
+  height: 1px;
+  background: rgba(24, 24, 24, 0.85);
+  transform: rotate(90deg) translate(-7px,-70px);
+}
+.hs-spot.left .hs-tooltip:before {
+	top: 16px;
+}
+
+.hs-wrap.mouseover .hs-spot-object.top .hs-spot-tooltip-outer, .hs-wrap.click .hs-spot-object.top .hs-spot-tooltip-outer {
+	position: absolute;
+	left: 0;
+	top: -30px;
+}
+.hs-spot-object.top .hs-tooltip-wrap {
+	bottom: 100%;
+	left: 0;
+	padding-bottom: 16px;
+}
+.hs-spot.top .hs-tooltip-wrap {
+	left: -124px;
+  top: -79px;
+}
+.hs-spot-object.top .hs-tooltip-line:before {
+	position: absolute;
+	content: "";
+	display: block;
+	left: 0px;
+	width: 60px;
+	height: 1px;
+	background: rgba(24, 24, 24, 0.85);
+	transform: rotate(30deg) translate(81px,21px);
+}
+
+.hs-spot-object.top .hs-tooltip-line:after {
+	position: absolute;
+	content: "";
+	display: block;
+	left: 0px;
+	width: 11px;
+	height: 1px;
+	background: rgba(24, 24, 24, 0.85);
+	transform: rotate(90deg) translate(39px,-58px);
+}
+
+.hs-wrap.mouseover .hs-spot-object.right .hs-spot-tooltip-outer, .hs-wrap.click .hs-spot-object.right .hs-spot-tooltip-outer {
+	position: absolute;
+	top: 0;
+	left: 30px;
+}
+.hs-spot-object.right .hs-tooltip-wrap {
+	left: 100%;
+	top: 0;
+	padding-left: 16px;
+}
+.hs-spot.right .hs-tooltip-wrap {
+	top: 45px;
+  left: 8px;
+}
+.hs-spot-object.right .hs-tooltip-line:before {
+	position: absolute;
+	content: "";
+	display: block;
+	left: 0px;
+	width: 61px;
+	height: 1px;
+	background: rgba(24, 24, 24, 0.85);
+	transform: rotate(30deg) translate(-14px,-21px);
+}
+
+.hs-spot-object.right .hs-tooltip-line:after {
+	position: absolute;
+	content: "";
+	display: block;
+	left: 0px;
+	width: 10px;
+	height: 1px;
+	background: rgba(24, 24, 24, 0.85);
+	transform: rotate(90deg) translate(-5px,-50px);
+}
+.hs-spot.right .hs-tooltip:before {
+	top: 16px;
+}
+
+.hs-wrap.mouseover .hs-spot-object.bottom .hs-spot-tooltip-outer, .hs-wrap.click .hs-spot-object.bottom .hs-spot-tooltip-outer {
+	position: absolute;
+	left: 0;
+	top: 30px;
+}
+.hs-spot-object.bottom .hs-tooltip-wrap {
+	top: 100%;
+	left: 0;
+	padding-top: 16px;
+}
+.hs-spot.bottom .hs-tooltip-wrap {
+	left: 36px;
+  top: -94px;
+}
+.hs-spot-object.bottom .hs-tooltip-line:before {
+	position: absolute;
+  content: "";
+  display: block;
+  left: 0px;
+  width: 60px;
+  height: 1px;
+  background: rgba(24, 24, 24, 0.85);
+	transform: rotate(-30deg) translate(-55px,37px);
+}
+
+.hs-spot-object.bottom .hs-tooltip-line:after {
+	position: absolute;
+	content: "";
+	display: block;
+	left: 0px;
+	width: 14px;
+	height: 1px;
+	background: rgba(24, 24, 24, 0.85);
+	transform: rotate(90deg) translate(38px,-20px);
+}
+
+/* Tooltip inline styles */
+
+.hs-tooltip h1 {
+	font: 14px/22px helvetica, tahoma, sans-serif;
+	font-weight: bold;
+}
+.hs-tooltip h2 {
+	font: 12px/22px helvetica, tahoma, sans-serif;
+	font-weight: bold;
+}
+.hs-tooltip h3 {
+	font: 11px/22px helvetica, tahoma, sans-serif;
+	font-weight: bold;
+}
+.hs-tooltip p {
+	font: 11px/18px helvetica, tahoma, sans-serif;
+	margin-bottom: 10px;
+}
+.hs-tooltip :last-child {
+	margin-bottom: 0;
+}
+
+/* ANIMATIONS */
+
+/* always */
+.hs-wrap.always .hs-spot-tooltip-outer {
+	opacity: 1;
+	left: 0 !important;
+	top: 0 !important;
+	/*width: 100% !important;*/
+	/*height: 100% !important;*/
+}
+.hs-wrap.always .hs-tooltip, .hs-wrap.always .hs-tooltip-wrap {
+	display: block;
+}
+
+/* mouseover & click */
+.hs-spot-object .hs-spot-tooltip-outer {
+	opacity: 0;
+	width: 0 !important;
+	height: 0 !important;
+	-moz-transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;
+	-webkit-transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;
+	transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.25s ease-out;
+}
+.hs-spot-object .hs-tooltip, .hs-spot-object .hs-tooltip-wrap {
+	display: none;
+}
+
+.hs-spot-object.visible-tooltip .hs-spot-tooltip-outer {
+	opacity: 1;
+	left: 0 !important;
+	top: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+.hs-spot-object.visible-tooltip .hs-tooltip, .hs-spot-object.visible-tooltip .hs-tooltip-wrap {
+	display: block;
+}
